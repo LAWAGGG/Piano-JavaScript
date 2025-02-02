@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content{
+    padding: .5rem;
+}
+
+.badan{
+    background-color: rgb(0, 187, 255);
+    height: 97.5vh;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.kiri{
+    position: absolute;
+    color: white;
+}
+
+.tengah{
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.3s;
+    z-index: 0;
+}
+
+.bungkus .kata{
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 0;
+    transition: 0.3s;
+    z-index: -4;
+    
+}
+
+.bungkus .kata2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    top: 0;
+    transition: 0.3s;
+    z-index: -10; 
+    background-color: #ccc;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.kata2 a{
+    color: black;
+    text-decoration: none;
+}
+
+.kata2:hover{
+    background-color: #8e8e8e;
+}
+
+.bungkus:hover .kata{
+    opacity: 1;
+    top: -3rem;
+    z-index: 1;
+}
+
+.bungkus:hover .kata2{
+    opacity: 1;
+    top: 17rem;
+    z-index: 1;
+}
+
+.bungkus{
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(10, 1fr);
+   
+    background-color: black;
+    border-radius:20px;
+    transition: 0.3s;
+    padding: 1rem;
+}
+
+.bungkus:hover{
+    padding: 2rem;
+}
+
+.not.putih{
+    background-color: white;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    padding-bottom: 10px;
+    justify-content: center;
+    width: 80px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+
+.not.putih.active{
+    background-color: #ccc;
+    height: 198px;
+}
+
+.not.hitam.active{
+    background-color: #4b4b4b;
+    transform: translateY(-2px);
+}
+
+.not.hitam{
+    display: flex;
+    align-items: end;
+    padding-bottom: 10px;
+    justify-content: center;
+    width: 35px;
+    height: 110px;
+    border: 1px solid black;
+    background-color: #252525;
+    color: white;
+    margin: 0 -17.5px;
+    z-index: 12;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.instruksi{
+    background-color: white;
+    padding: 1rem 5rem 1rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 25rem;
+    color: black;
+    opacity: 0;
+    border-radius: 20px;
+    transition: 0.3s;
+    z-index: -1;
+    box-shadow: 4px 4px 4px solid black;
+}
+
+.btn{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.btn button{
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.suara{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    left: 98%;
+    transition: 0.3s;
+    background-color: rgb(0, 147, 201);
+    padding: .5rem 1.2rem .5rem 1.2rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: -1;
+}
+
+.suara input{
+    accent-color: white;
+    writing-mode: vertical-lr;
+    direction: rtl;
+    border: none;
+    outline: none;
+}
+
+.bungkus:hover .suara{
+    opacity: 1;
+    left: 100%;
+    z-index: 1;
+}
+
+.show{
+    opacity: 1;
+    left: 10%;
+}
+
+@media (max-width:888px){
+    .bungkus{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .not.hitam{
+        display: none;
+    }
+    .kata2{
+        display: none;
+      }
+      .instruksi{
+          display: none;
+      }
+}
+
+@media (max-width :768px) {
+    .bungkus{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .not.hitam{
+        display: none;
+    }
+    .not.putih{
+        height: 170px;
+        width: 70px;
+    }
+    .suara{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 95%;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .bungkus:hover .suara{
+        opacity: 1;
+        top: 100% ;
+        left: 50%;
+        z-index: 1;
+    }
+    .suara input{
+        writing-mode: horizontal-tb;
+        direction: rtl;
+    }
+    .kata2{
+      display: none;
+    }
+    .instruksi{
+        display: none;
+    }
+}

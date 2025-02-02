@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Gweh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+      <div class="badan">
+        <div class="kiri">
+          <h2>AF</h2>
+        </div>
+        <div class="kanan">
+
+        </div>
+      <div class="tengah">
+        <div class="bungkus">
+          <div class="kata">
+            <h1>Pianoooo~</h1>
+          </div>
+          <div class="suara">
+            <input type="range" orient="vertical" min="0" max="1" step="any">
+          </div>
+          <div class="kata2">
+            <a href="#" onclick="tampilan()">Cara Main?</a>
+          </div>
+          <div class="not putih" data-key="a" onclick="playaudio('a')">1</div>
+          <div class="not hitam" data-key="w" onclick="playaudio('w')">A</div>
+          <div class="not putih" data-key="s" onclick="playaudio('s')">2</div>
+          <div class="not hitam" data-key="e" onclick="playaudio('e')">S</div>
+          <div class="not putih" data-key="d" onclick="playaudio('d')">3</div>
+          <div class="not putih" data-key="f" onclick="playaudio('f')">4</div>
+          <div class="not hitam" data-key="t" onclick="playaudio('t')">D</div>
+          <div class="not putih" data-key="g" onclick="playaudio('g')">5</div>
+          <div class="not hitam" data-key="y" onclick="playaudio('y')">F</div>
+          <div class="not putih" data-key="h" onclick="playaudio('h')">6</div>
+          <div class="not hitam" data-key="u" onclick="playaudio('u')">G</div>
+          <div class="not putih" data-key="j" onclick="playaudio('j')">7</div>
+          <div class="not putih" data-key="k" onclick="playaudio('k')">8</div>
+          <div class="not hitam" data-key="o" onclick="playaudio('o')">H</div>
+          <div class="not putih" data-key="l" onclick="playaudio('l')">9</div>
+          <div class="not hitam" data-key="p" onclick="playaudio('p')">J</div>
+          <div class="not putih" data-key=";" onclick="playaudio(';')">0</div>
+        </div>
+        <div class="instruksi" id="instruksi">
+          <ul>
+            <h3>Keyword :</h3>
+            <li>1 = DO</li>
+            <li>2 = RE</li>
+            <li>3 = MI</li>
+            <li>4 = FA</li>
+            <li>5 = SOL</li>
+            <li>6 = LA</li>
+            <li>7 = SI</li>
+            <li>8 = DO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Main.js"></script>
+</body>
+</html>
